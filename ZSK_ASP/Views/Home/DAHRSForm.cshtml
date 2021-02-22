@@ -1,0 +1,65 @@
+﻿
+@model ZSK_ASP.Models.DAHRSEinheiten
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DAHRSForm</title>
+</head>
+<body>
+    <h1> DAHRS Rechner </h1>
+    <form asp-action="PreisinEuroDAHRS" method="post">
+        <div>
+            <label asp-for="Dorsche">Anzahl Dorsche:</label>
+            <input asp-for="Dorsche" />
+            <div></div>
+            <label asp-for="Aale">Anzahl Aale:</label>
+            <input asp-for="Aale" />
+            <div></div>
+            <label asp-for="Heringe">Anzahl Heringe:</label>
+            <input asp-for="Heringe" />
+            <div></div>
+            <label asp-for="Rochen">Anzahl Rochen:</label>
+            <input asp-for="Rochen" />
+            <div></div>
+            <label asp-for="Sprotten">Anzahl Sprotten:</label>
+            <input asp-for="Sprotten" />
+
+        </div>
+        <button type="submit">In Euro umrechnen!</button>
+    </form>
+    <form asp-action="PreisinTierenDAHRS" method="post">
+        <div>
+            <label asp-for="Euro">Euro:</label>
+            <input asp-for="Euro" />
+        </div>
+        <button type="submit">In Tiere umrechnen!</button>
+    </form>
+    <form asp-action="DAHRSinZSK" method="post">
+        <div>
+            <label asp-for="Dorsche">Anzahl Dorsche:</label>
+            <input asp-for="Dorsche" />
+            <div></div>
+            <label asp-for="Aale">Anzahl Aale:</label>
+            <input asp-for="Aale" />
+            <div></div>
+            <label asp-for="Heringe">Anzahl Heringe:</label>
+            <input asp-for="Heringe" />
+            <div></div>
+            <label asp-for="Rochen">Anzahl Rochen:</label>
+            <input asp-for="Rochen" />
+            <div></div>
+            <label asp-for="Sprotten">Anzahl Sprotten:</label>
+            <input asp-for="Sprotten" />
+
+        </div>
+        <button type="submit">In ZSK umrechnen!</button>
+    </form>
+    <a asp-action="Index">Home</a>
+</body>
+</html>

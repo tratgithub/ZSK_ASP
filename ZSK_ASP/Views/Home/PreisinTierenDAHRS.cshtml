@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<ZSK_ASP.Models.DAHRSEinheiten>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ergebnis</title>
+</head>
+<body>
+    <h1> DAHRS Rechner - Ergebnis in Tieren </h1>
+    <table>
+        <thead>
+            <tr><th>Dorsche </th><th>Aale </th><th>Heringe </th><th>Rochen </th><th>Sprotten </th><th>Rest </th></tr>
+        </thead>
+        <tbody>
+            @foreach (DAHRSEinheiten item in Model)
+            {
+                <tr>
+                    <td>@item.Dorsche</td>
+                    <td>@item.Aale</td>
+                    <td>@item.Heringe</td>
+                    <td>@item.Rochen</td>
+                    <td>@item.Sprotten </td>
+                    <td>@item.Rest €</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="Index">Home</a>
+</body>
+</html>

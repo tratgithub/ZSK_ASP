@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<ZSK_ASP.Models.ZSKEinheiten>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ergebnis</title>
+</head>
+<body>
+    <h1> ZSK Rechner - Ergebnis in Euro </h1>
+    <p>Betrag in Euro:</p>
+    @foreach (ZSK_ASP.Models.ZSKEinheiten item in Model)
+    {
+        <p>@item.Euro</p>
+    }
+    <a asp-action="Index">Home</a>
+</body>
+</html>

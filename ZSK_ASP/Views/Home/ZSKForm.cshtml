@@ -1,0 +1,60 @@
+﻿
+@model ZSK_ASP.Models.ZSKEinheiten
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ZSKForm</title>
+</head>
+<body>
+    <h1> ZSK Rechner </h1>
+    <form asp-action="ErgebnisinEuro" method="post">
+        <div>
+            <label asp-for="Ziegen">Anzahl Ziegen:</label>
+            <input asp-for="Ziegen" />
+            <div></div>
+            <label asp-for="Schafe">Anzahl Schafe:</label>
+            <input asp-for="Schafe" />
+            <div></div>
+            <label asp-for="Kuehe">Anzahl Kuehe:</label>
+            <input asp-for="Kuehe" />
+            <div></div>
+            <label asp-for="KleineZiegen">Anzahl KleineZiegen:</label>
+            <input asp-for="KleineZiegen" />
+
+        </div>
+        <button type="submit">In Euro umrechnen!</button>
+    </form>
+    <form asp-action="PreisinTieren" method="post">
+        <div>
+            <label asp-for="Euro">Euro:</label>
+            <input asp-for="Euro" />
+
+        </div>
+        <button type="submit">In Tiere umrechnen!</button>
+    </form>
+    <form asp-action="ZSKinDAHRS" method="post">
+        <div>
+            <label asp-for="Ziegen">Anzahl Ziegen:</label>
+            <input asp-for="Ziegen" />
+            <div></div>
+            <label asp-for="Schafe">Anzahl Schafe:</label>
+            <input asp-for="Schafe" />
+            <div></div>
+            <label asp-for="Kuehe">Anzahl Kuehe:</label>
+            <input asp-for="Kuehe" />
+            <div></div>
+            <label asp-for="KleineZiegen">Anzahl KleineZiegen:</label>
+            <input asp-for="KleineZiegen" />
+
+        </div>
+        <button type="submit">In DAHRS umrechnen!</button>
+    </form>
+    <a asp-action="Index">Home</a>
+</body>
+</html>

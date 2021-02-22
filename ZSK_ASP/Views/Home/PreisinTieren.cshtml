@@ -1,0 +1,35 @@
+﻿
+@model IEnumerable<ZSK_ASP.Models.ZSKEinheiten>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ergebnis</title>
+</head>
+<body>
+    <h1> ZSK Rechner  - Ergebnis in Tieren </h1>
+    <table>
+        <thead>
+            <tr><th>Ziegen </th><th>Schafe </th><th>Kühe </th><th>Kleine Ziegen </th><th>Rest </th></tr>
+        </thead>
+        <tbody>
+            @foreach (ZSKEinheiten item in Model)
+            {
+                <tr>
+                    <td>@item.Ziegen</td>
+                    <td>@item.Schafe</td>
+                    <td>@item.Kuehe</td>
+                    <td>@item.KleineZiegen</td>
+                    <td>@item.Rest €</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-action="Index">Home</a>
+</body>
+</html>
